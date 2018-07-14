@@ -2,6 +2,7 @@
   "name": "dennis-jefferson",
   "version": "2.0.0",
   "scripts": {
+    "now-build": "echo 'Built on Travis CI'",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -15,6 +16,9 @@
     "react": "^16.4.1",
     "react-apollo": "2.1.0",
     "react-dom": "^16.4.1"
+  },
+  "now": {
+    "alias": "dennisjefferson.com"
   },
   "author": "",
   "license": "ISC"
