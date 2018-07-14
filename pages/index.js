@@ -1,12 +1,8 @@
-import App from '../components/App'
-import Header from '../components/Header'
-import Submit from '../components/Submit'
-import PostList from '../components/PostList'
+import App from '../components/App';
+import UnderConstruction from '../components/UnderConstruction';
 
 export default () => (
   <App>
-    <Header />
-    <Submit />
-    <PostList />
+    <UnderConstruction />
   </App>
-)
+);
