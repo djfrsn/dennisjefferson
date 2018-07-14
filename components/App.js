@@ -1,5 +1,8 @@
-export default ({ children }) => (
+import Head from './Head';
+
+export default ({ title = 'Dennis Jefferson', children }) => (
   <main>
+    <Head title={title} />
     {children}
     <style jsx global>{`
       * {
@@ -39,4 +42,4 @@ export default ({ children }) => (
       }
     `}</style>
   </main>
-)
+);
