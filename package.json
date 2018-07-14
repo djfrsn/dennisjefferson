@@ -18,7 +18,14 @@
     "react-dom": "^16.4.1"
   },
   "now": {
-    "alias": "dennisjefferson.com"
+    "alias": "dennisjefferson.com",
+    "files": [
+      ".next",
+      "server",
+      "static",
+      "package.json",
+      "yarn.lock"
+    ]
   },
   "author": "",
   "license": "ISC"
