@@ -1,6 +1,6 @@
 import Head from './Head';
 
-export default ({ title = 'Dennis Jefferson', children }) => (
+export default ({ title, children }) => (
   <main>
     <Head title={title} />
     {children}
