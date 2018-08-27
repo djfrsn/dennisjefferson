@@ -17,9 +17,8 @@ export default css`
     padding: 0;
   }
   main {
-    margin: 1em 8%;
-    padding: 1em;
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+    display: flex;
   }
   a {
     color: #22bad9;

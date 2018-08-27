@@ -1,8 +1,8 @@
 import Head from "./Head";
-import styles, { colors } from "./_styles";
+import styles, { colors, flex } from "./_styles";
 
 export default ({ title, children }) => (
-  <main className="primary-bg-color primary-color">
+  <main className="column primary-color">
     <Head title={title} />
     {children}
     <style jsx global>
@@ -10,6 +10,9 @@ export default ({ title, children }) => (
     </style>
     <style jsx global>
       {colors}
+    </style>
+    <style jsx global>
+      {flex}
     </style>
   </main>
 );

@@ -3,36 +3,14 @@ import { withRouter } from "next/router";
 import styles, { utils, flex } from "./_styles";
 
 const Header = ({ router: { pathname } }) => (
-  <header>
-    <h1>
-      Dennis <br />
-      Jefferson
-    </h1>
-    {/* <h2
-      className={`active-page-title flex-right ${
-        pathname === "/" ? "is-active" : "hidden"
-      }`}
-    >
-      Home
-    </h2> */}
-    <div className="triangle-container flex-right">
-      <div className="triangle">
-        <div className="triangle-text-left">
-          <span className="text-left-letter rotate-vertical">e</span>
-          <span className="text-left-letter rotate-vertical">m</span>
-          <span className="text-left-letter rotate-vertical">o</span>
-          <span className="text-left-letter rotate-vertical">h</span>
-        </div>
-        <span className="triangle-text-top-right">home</span>
-        <span className="triangle-text-bottom-right">home</span>
-        <div className="empty" />
-      </div>
-    </div>
+  <header className="">
+    <h1 className="secondary-color">Dennis Jefferson</h1>
     <style jsx>{`
       header {
-        margin-bottom: 25px;
         display: flex;
-        flex-direction: row;
+        padding: 1em;
+        margin: 0;
+        border-bottom: 1px solid floralwhite;
       }
       h1,
       .active-page-title {
@@ -70,6 +48,10 @@ const Header = ({ router: { pathname } }) => (
         border-bottom: solid 39px floralwhite;
         border-right: solid 21px transparent;
         border-left: solid 21px transparent;
+      }
+      .triangle-text {
+        transition-duration: 0.8s;
+        transition-property: all;
       }
       .triangle-text-left {
         position: absolute;
