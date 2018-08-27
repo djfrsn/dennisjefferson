@@ -1,50 +1,15 @@
 import Head from "./Head";
+import styles, { colors } from "./_styles";
 
 export default ({ title, children }) => (
-  <main>
+  <main className="primary-bg-color primary-color">
     <Head title={title} />
     {children}
-    <style jsx global>{`
-      * {
-        font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
-          "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New",
-          monospace, serif;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: royalblue;
-        color: #4b4f6f;
-      }
-      main {
-        background-color: floralwhite;
-      }
-      a {
-        color: #22bad9;
-      }
-      p {
-        font-size: 14px;
-        line-height: 24px;
-      }
-      article {
-        margin: 0 auto;
-        max-width: 650px;
-      }
-      button {
-        align-items: center;
-        background-color: #22bad9;
-        border: 0;
-        color: white;
-        display: flex;
-        padding: 5px 7px;
-      }
-      button:active {
-        background-color: #1b9db7;
-        transition: background-color 0.3s;
-      }
-      button:focus {
-        outline: none;
-      }
-    `}</style>
+    <style jsx global>
+      {styles}
+    </style>
+    <style jsx global>
+      {colors}
+    </style>
   </main>
 );
