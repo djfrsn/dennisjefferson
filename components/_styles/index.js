@@ -38,6 +38,15 @@ export const utils = css`
 `;
 
 export const flex = css`
+  .flex {
+    display: flex;
+  }
+  .row-wrap {
+    flex-flow: row wrap;
+  }
+  .row {
+    flex-direction: row;
+  }
   .column {
     flex-direction: column;
     margin-right: 1em;

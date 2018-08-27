@@ -12,6 +12,12 @@ export default css`
       "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
       serif;
   }
+  html,
+  body,
+  #__next,
+  main {
+    height: 100%;
+  }
   body {
     margin: 0;
     padding: 0;

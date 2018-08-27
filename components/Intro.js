@@ -1,7 +1,7 @@
 import { flex, utils } from "./_styles";
 
 export default () => (
-  <div className="intro-container">
+  <article className="column intro-container">
     <h2 className="secondary-color">
       Hey, I'm a software developer from Los Angeles, CA. I can help you build
       your next product.
@@ -13,7 +13,6 @@ export default () => (
         padding: 0.5em;
       }
     `}</style>
-    <style jsx>{flex}</style>
     <style jsx>{utils}</style>
-  </div>
+  </article>
 );
