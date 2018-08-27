@@ -1,4 +1,4 @@
-import Head from './Head';
+import Head from "./Head";
 
 export default ({ title, children }) => (
   <main>
@@ -6,13 +6,18 @@ export default ({ title, children }) => (
     {children}
     <style jsx global>{`
       * {
-        font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-          'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
+        font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
+          "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New",
           monospace, serif;
       }
       body {
         margin: 0;
-        padding: 25px 50px;
+        padding: 0;
+        background-color: royalblue;
+        color: #4b4f6f;
+      }
+      main {
+        background-color: floralwhite;
       }
       a {
         color: #22bad9;
