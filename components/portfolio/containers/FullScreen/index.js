@@ -24,6 +24,7 @@ class FullScreen extends Component {
         ...this.props.portfolio[0],
         active: this.props.portfolio[0].toString()
       };
+      console.warn('TODO: only push home if route isn"t "/');
       this.props.router.push("/");
     }
 
@@ -39,7 +40,7 @@ class FullScreen extends Component {
   }
 
   loadPage = () => {
-    require([`../../pages/${this.app.name}.jsx`], mod => {
+    require([`../../pages/${this.app.name}.js`], mod => {
       this.Page = mod.default;
       this.forceUpdate(); // render content with opacity: 0
       setTimeout(() => {
@@ -71,7 +72,7 @@ class FullScreen extends Component {
       bounceInDown: this.initialRender ? true : false,
       bounceOutUp: this.state.onClose ? true : false
     });
-    const Page = this.Page ? this.Page : "Loading";
+    const Page = this.Page;
     return (
       <div className={cx("fullScreen")}>
         <section className={contentClass}>
@@ -87,7 +88,7 @@ class FullScreen extends Component {
             {this.app.subtitle}
           </h3>
 
-          <Page {...this.app} onClose={this.state.onClose} />
+          {this.Page && <Page {...this.app} onClose={this.state.onClose} />}
 
           <button
             className={cx("button", "button--close")}

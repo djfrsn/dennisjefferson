@@ -9,13 +9,14 @@ import { withRouter } from "next/router";
 import "./App.scss";
 
 const toPermalink = p => {
-  return { permalink: (typeof p === "string" && p.split("/")[1]) || "" };
+  return p !== "/" && { permalink: p.split("/")[1] };
 };
 
 class Layout extends Component {
   render() {
     const permalink = toPermalink(this.props.router.pathname);
     const routeParams = permalink ? permalink : { permalink: "" };
+    console.log(permalink);
     let View = (
       <Portfolio
         portfolio={portfolio}
@@ -38,10 +39,6 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = {
-  params: PropTypes.shape({
-    permalink: PropTypes.string.isRequried
-  })
-};
+Layout.propTypes = {};
 
 export default withRouter(Layout);
