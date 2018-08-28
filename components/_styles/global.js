@@ -8,9 +8,7 @@ import css from "styled-jsx/css";
 
 export default css`
   * {
-    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
-      "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
-      serif;
+    font-family: "Lato", sans-serif;
   }
   html,
   body,

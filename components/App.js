@@ -1,23 +1,13 @@
 import React from "react";
 import Head from "./Head";
 import Header from "./Header";
-import styles, { colors, flex } from "./_styles";
+import "./_styles/index.scss";
 
 export default ({ title, children }) => (
   <React.Fragment>
-    <Header />
-    <main className="primary-color">
+    <main className="flex row-wrap primary-color">
       <Head title={title} />
       {children}
-      <style jsx global>
-        {styles}
-      </style>
-      <style jsx global>
-        {colors}
-      </style>
-      <style jsx global>
-        {flex}
-      </style>
     </main>
   </React.Fragment>
 );

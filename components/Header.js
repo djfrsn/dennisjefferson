@@ -5,7 +5,7 @@ const Header = () => (
     <h1 className="secondary-color">Dennis Jefferson</h1>
     <style jsx>{`
       header {
-        padding: 1em 1em 0;
+        padding: 0.5em;
         margin: 0;
         width: 100%;
         border-bottom: 1px solid floralwhite;

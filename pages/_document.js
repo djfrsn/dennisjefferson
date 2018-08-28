@@ -9,7 +9,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head />
+        <Head>
+          <link rel="stylesheet" href="/_next/static/style.css" />
+        </Head>
         <body className="secondary-bg-color">
           <Main />
           <NextScript />

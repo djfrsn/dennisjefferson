@@ -4,20 +4,24 @@ import styles, { utils, flex } from "./_styles";
 
 const Navigation = ({ router: { pathname } }) => (
   <nav className="column secondary-color">
-    <h2
-      className={`active-page-title ${
-        pathname === "/" ? "is-active" : "hidden"
-      }`}
-    >
-      Intro
-    </h2>
-    <h2
-      className={`active-page-title ${
-        pathname === "/showcase" ? "is-active" : "hidden"
-      }`}
-    >
-      Showcase
-    </h2>
+    <Link href="/">
+      <a
+        className={`active-page-title ${
+          pathname === "/" ? "is-active" : "hidden"
+        }`}
+      >
+        Intro
+      </a>
+    </Link>
+    <Link href="/showcase">
+      <a
+        className={`active-page-title ${
+          pathname === "/showcase" ? "is-active" : "hidden"
+        }`}
+      >
+        Showcase
+      </a>
+    </Link>
     {/* <div className="triangle-container flex-right">
       <div className="triangle">
         <div className="empty" />

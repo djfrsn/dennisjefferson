@@ -1,6 +1,6 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-export default ({ title = 'Dennis Jefferson' }) => (
+export default ({ title = "Dennis Jefferson" }) => (
   <Head>
     <title>{title}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -32,5 +32,9 @@ export default ({ title = 'Dennis Jefferson' }) => (
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="/static/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
   </Head>
 );
