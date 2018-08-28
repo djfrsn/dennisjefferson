@@ -1,0 +1,6 @@
+@import '../../styles/core/contentIntro.scss';
+
+.section_title {
+  @extend .content__item--header-medium;
+  margin-top: 60px;
+}

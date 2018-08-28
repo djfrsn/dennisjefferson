@@ -1,7 +1,5 @@
 import React from "react";
 import Head from "./Head";
-import Header from "./Header";
-import "./_styles/index.scss";
 
 export default ({ title, children }) => (
   <React.Fragment>

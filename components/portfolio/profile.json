@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "Your Name",
+    "twitter": "yourtwitter",
+    "url": "http://www.yoururl.com",
+    "header_bg": "/static/portfolio/profile-header.png",
+    "avatar": "/static/portfolio/avatar.jpg",
+    "email": "you@CompanyName.com"
+  },
+  "baseurl": "",
+  "description": "Customize in profile.json"
+}

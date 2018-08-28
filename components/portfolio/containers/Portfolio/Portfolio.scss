@@ -1,0 +1,17 @@
+@import '../../styles/core/container.scss';
+/*
+**
+*** Intro Styles
+**
+*/
+.portfolio {
+	@extend .container;
+}
+
+.inner__container {
+  display: flex;
+  height: 65%;
+  min-height: 24em;
+  justify-content: center;
+  align-items: center;
+}

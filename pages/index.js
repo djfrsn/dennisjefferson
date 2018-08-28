@@ -1,5 +1,4 @@
 import App from "../components/App";
-import Layout from "../components/Layout";
-import Intro from "../components/Intro";
+import Layout from "../components/portfolio/Layout";
 
-export default () => <App title="Dennis Jefferson - Home">Boo!</App>;
+export default () => <App title="Dennis Jefferson - Home"><Layout params={{}} /></App>;

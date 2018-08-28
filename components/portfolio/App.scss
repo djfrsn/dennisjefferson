@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "fontello";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("/static/portfolio/fonts/fontello/fontello.eot");
+  src: url("/static/portfolio/fonts/fontello/fontello.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/portfolio/fonts/fontello/fontello.woff") format("woff"),
+    url("/static/portfolio/fonts/fontello/fontello.ttf") format("truetype"),
+    url("/static/portfolio/fonts/fontello/fontello.svg") format("svg");
+} /* Made with http://icomoon.io/ */
+
+@font-face {
+  font-family: "feather";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("/static/portfolio/fonts/feather/feather.eot");
+  src: url("/static/portfolio/fonts/feather/feather.eot?#iefix")
+      format("embedded-opentype"),
+    url("/static/portfolio/fonts/feather/feather.ttf") format("truetype"),
+    url("/static/portfolio/fonts/feather/feather.woff") format("woff"),
+    url("/static/portfolio/fonts/feather/feather.svg#feather") format("svg");
+}
+
+/* Resets */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body > div {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: #cecece;
+  background: #222125;
+
+  font-family: "Avenir", "Helvetica Neue", "Lato", "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+
+  color: #5c5edc;
+  outline: none;
+}
+
+a:focus {
+  color: #ddd;
+}
+
+a:hover {
+  color: #fff;
+}

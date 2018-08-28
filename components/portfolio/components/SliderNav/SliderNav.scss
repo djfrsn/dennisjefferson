@@ -1,0 +1,44 @@
+@import '../../styles/core/icon.scss';
+@import '../../styles/core/button.scss';
+/*
+**
+*** SliderNav Styles
+**
+*/
+.slider__nav {
+  position: fixed;
+  bottom: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.text-hidden {
+  position: absolute;
+  top: 200%;
+}
+
+.icon--zoom:before {
+  content: "\e036";
+}
+.icon--arrow-right:before {
+  content: "\e600";
+}
+.icon--arrow-left:before {
+  content: "\e601";
+}
+
+@media screen and (max-width: 40em) {
+  .slider__nav  {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 20em) {
+  .slider__nav  {
+    bottom: 4em;
+  }
+}

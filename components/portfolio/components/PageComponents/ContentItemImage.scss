@@ -1,0 +1,26 @@
+@import '../../styles/core/animate.scss';
+@import '../../styles/core/zoomIn.scss';
+
+.content__item-img-center {
+  display: block;
+  max-width: 80%;
+  margin: 50px auto;
+}
+
+.content__item-img-fill-width {
+  display: block;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.content__item-img-right {
+  display: block;
+  max-width: 80%;
+  margin: 50px 0 50px auto;
+}
+
+.content__item-img-left {
+  display: block;
+  max-width: 80%;
+  margin: 50px auto 50px 0;
+}
