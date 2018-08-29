@@ -10,43 +10,15 @@ class FullScreen extends Component {
   constructor(props) {
     super(props);
 
-    this.props.portfolio.every(app => {
-      if (app.permalink === props.routeParams.showcase) {
-        this.app = app;
-        return false;
-      }
-      return true;
-    });
-
-    if (!this.app) {
-      // send user home when app isn't found
-      this.app = {
-        ...this.props.portfolio[0],
-        active: this.props.portfolio[0].toString()
-      };
-    }
-
-    this.state = { onClose: undefined, reveal: false };
+    this.state = { onClose: undefined, reveal: true };
     this.initialRender = true;
   }
 
   componentDidMount() {
-    this.loadPage();
     setTimeout(() => {
       this.initialRender = false; // deploy 400ms to allow app icon transition to complete
     }, 401);
   }
-
-  loadPage = () => {
-    require([`../../pages/${this.app.name}.js`], mod => {
-      this.Page = mod.default;
-      this.forceUpdate(); // render content with opacity: 0
-      setTimeout(() => {
-        // defer rendering to prevent ui jank from loading async
-        this.setState({ ...this.state, reveal: true }); // render content with opacity: 1
-      }, 0);
-    });
-  };
 
   onClose = () => {
     this.setState({ ...this.state, onClose: true });
@@ -55,7 +27,7 @@ class FullScreen extends Component {
 
   onEndTransition = () => {
     setTimeout(() => {
-      this.props.router.push(`/?showcase=${this.app.permalink}`);
+      this.props.router.push(`/?showcase=${this.props.permalink}`);
     }, 750);
   };
 
@@ -70,23 +42,22 @@ class FullScreen extends Component {
       bounceInDown: this.initialRender ? true : false,
       bounceOutUp: this.state.onClose ? true : false
     });
-    const Page = this.Page;
     return (
       <div className={cx("fullScreen")}>
         <section className={contentClass}>
           <img
             className={appIconClass}
-            src={`/static/portfolio/${this.app.permalink}/icon.png`}
-            alt={this.app.title}
+            src={`/static/portfolio/${this.props.permalink}/icon.png`}
+            alt={this.props.title}
           />
           <h2 className={cx("content__item--header-large")}>
-            {this.app.title}
+            {this.props.title}
           </h2>
           <h3 className={cx("content__item--header-medium")}>
-            {this.app.subtitle}
+            {this.props.subtitle}
           </h3>
 
-          {this.Page && <Page {...this.app} onClose={this.state.onClose} />}
+          {this.props.body_component}
 
           <button
             className={cx("button", "button--close")}
@@ -105,6 +76,7 @@ FullScreen.propTypes = {
   routeParams: PropTypes.shape({
     showcase: PropTypes.string.isRequried
   }),
+  body_component: PropTypes.object,
   portfolio: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,

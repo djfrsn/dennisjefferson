@@ -1,8 +1,14 @@
 import App from "../components/App";
-import Layout from "../components/portfolio/Layout";
+import Meeru from "../components/portfolio/pages/Meeru";
+import FullScreen from "../components/portfolio/containers/FullScreen";
+
+import portfolio from "../components/portfolio/portfolio.json";
 
 export default () => (
   <App title="Dennis Jefferson - Home">
-    <Layout />
+    <FullScreen
+      {...portfolio[1]}
+      body_component={<Meeru permalink="meeru" />}
+    />
   </App>
 );
