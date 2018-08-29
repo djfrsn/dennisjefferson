@@ -1,0 +1,39 @@
+.hero__intro {
+  margin: 1em;
+}
+
+.hero__hr {
+}
+
+.hero__text_large {
+  margin: 0.5em 0 0;
+
+  font-size: 1.75em;
+  line-height: 1.1em;
+}
+
+.hero__text_medium {
+  margin: 0.5em 0 0;
+
+  font-size: 1.25em;
+}
+
+.hero__text_small {
+  display: inline;
+
+  padding-left: 0.5em;
+
+  background: #5c5edc;
+
+  font-size: 1.3em;
+}
+
+.hero__text_tiny {
+  display: inline;
+
+  padding-right: 0.5em;
+
+  background: #5c5edc;
+
+  font-size: 1.3em;
+}

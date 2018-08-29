@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Slider from "../Slider";
+import HeroIntro from "../HeroIntro";
 import ProfileCard from "../ProfileCard";
 import Header from "../Header";
 import Zoomer from "../Zoomer";
@@ -57,6 +58,7 @@ class Portfolio extends Component {
           animateHireMeButton={this.state.animateHireMeButton}
           onToggleProfileCard={this.onToggleProfileCard}
         />
+        <HeroIntro />
         <div className={cx("inner__container")}>
           <Slider
             children={children}
