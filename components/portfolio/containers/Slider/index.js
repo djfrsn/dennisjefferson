@@ -31,13 +31,14 @@ class Slider extends Component {
 
   componentWillMount() {
     // invoked once before initial render
-    const permalink = this.props.routeParams.permalink;
-    if (permalink) {
+    const permalink = this.props.routeParams.showcase;
+
+    if (permalink && permalink !== "") {
       const slides = [];
       this.state.slides.map(slide => {
         slides.push({
           ...slide,
-          active: slide.permalink === permalink.split("-")[1] ? true : false // follows preview-appname convention
+          active: slide.permalink === permalink ? true : false // follows preview-appname convention
         });
       });
       this.setState({ ...this.state, slides: slides });
@@ -405,7 +406,7 @@ Slider.propTypes = {
   opaque: PropTypes.bool.isRequired,
   onAnimateHireMeButton: PropTypes.func.isRequired,
   routeParams: PropTypes.shape({
-    permalink: PropTypes.string.isRequired
+    showcase: PropTypes.string.isRequired
   }),
   slides: PropTypes.arrayOf(
     PropTypes.shape({

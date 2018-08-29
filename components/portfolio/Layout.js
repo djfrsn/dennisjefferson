@@ -14,9 +14,9 @@ const toPermalink = p => {
 
 class Layout extends Component {
   render() {
-    const permalink = toPermalink(this.props.router.pathname);
-    const routeParams = permalink ? permalink : { permalink: "" };
-
+    const route_query = this.props.router.query;
+    const routeParams = route_query.showcase ? route_query : { showcase: "" };
+    console.log(routeParams);
     let View = (
       <Portfolio
         portfolio={portfolio}
@@ -25,15 +25,9 @@ class Layout extends Component {
       />
     );
     // '/' & '/preview-example' links are directed to Portfolio otherwise if /:permalink, user is directed to Fullscreen
-    if (permalink) {
-      const params = this.props.router.pathname.split("-");
-      View =
-        params[0] === "preview" && params.length > 1 ? (
-          View
-        ) : (
-          <FullScreen portfolio={portfolio} routeParams={routeParams} />
-        );
-    }
+    // if (route_query.showcase) {
+    //   View = <FullScreen portfolio={portfolio} routeParams={routeParams} />;
+    // }
 
     return View;
   }

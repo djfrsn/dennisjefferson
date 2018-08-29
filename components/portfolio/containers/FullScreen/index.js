@@ -11,7 +11,7 @@ class FullScreen extends Component {
     super(props);
 
     this.props.portfolio.every(app => {
-      if (app.permalink === props.routeParams.permalink) {
+      if (app.permalink === props.routeParams.showcase) {
         this.app = app;
         return false;
       }
@@ -24,7 +24,6 @@ class FullScreen extends Component {
         ...this.props.portfolio[0],
         active: this.props.portfolio[0].toString()
       };
-      this.props.router.push("/");
     }
 
     this.state = { onClose: undefined, reveal: false };
@@ -104,7 +103,7 @@ class FullScreen extends Component {
 
 FullScreen.propTypes = {
   routeParams: PropTypes.shape({
-    permalink: PropTypes.string.isRequried
+    showcase: PropTypes.string.isRequried
   }),
   portfolio: PropTypes.arrayOf(
     PropTypes.shape({
