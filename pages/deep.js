@@ -1,6 +1,6 @@
 import App from "../components/App";
 import Deep from "../components/portfolio/pages/Deep";
-import FullScreen from "../components/portfolio/containers/FullScreen";
+import FullScreen from "../components/portfolio/components/FullScreen";
 
 import portfolio from "../components/portfolio/portfolio.json";
 
