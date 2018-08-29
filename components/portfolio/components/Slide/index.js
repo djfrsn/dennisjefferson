@@ -31,7 +31,11 @@ export default class Slide extends Component {
         >
           {this.props.children}
         </div>
-        <h2 className={cx("slide__title")} ref={ref => (this.slideTitle = ref)}>
+        <h2
+          className={cx("slide__title")}
+          onClick={this.onSlideClick}
+          ref={ref => (this.slideTitle = ref)}
+        >
           <pre>{this.props.name}</pre>
           <span>{this.props.tagline}</span>
         </h2>

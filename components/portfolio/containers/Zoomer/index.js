@@ -13,6 +13,7 @@ export default class Zoomer extends Component {
   }
 
   onZoomerClick = () => {
+    console.log("h");
     this.animate();
   };
 
@@ -38,10 +39,13 @@ export default class Zoomer extends Component {
       "zoomer__area--size-5": this.props.device === "imac" ? true : false
     });
     return (
-      <div className={zoomerClass} ref={ref => (this.Zoomer = ref)}>
+      <div
+        onClick={this.onZoomerClick}
+        className={zoomerClass}
+        ref={ref => (this.Zoomer = ref)}
+      >
         <img
           className={cx("zoomer__image")}
-          onClick={this.onZoomerClick}
           src={`/static/portfolio/${this.props.device}.png`}
           alt={this.props.device}
         />
