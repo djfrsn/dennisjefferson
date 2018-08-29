@@ -46,7 +46,7 @@ class Slider extends Component {
   }
 
   componentDidMount() {
-    window.onpopstate = this.onBackButtonEvent;
+    window.onpopstate = this.onBackButtonEvent.bind(this);
     document.addEventListener("keydown", this.listenToKeyPress);
     if (typeof window !== "undefined") {
       Hammer = require("../../vendor/hammer");
@@ -107,16 +107,15 @@ class Slider extends Component {
 
   onBackButtonEvent = e => {
     const slides = [];
-    const params = e.currentTarget.location.pathname.split("-");
-    const firstParam = params[0].split("/")[1];
+    const showcase = this.props.router.query.showcase;
 
-    if (firstParam === "preview") {
+    if (showcase !== "") {
       this.clearDynamicsCss();
 
       this.state.slides.forEach(slide => {
         slides.push({
           ...slide,
-          active: slide.permalink === params[1] ? true : false
+          active: slide.permalink === showcase ? true : false
         });
       });
 
@@ -182,7 +181,22 @@ class Slider extends Component {
     dynamics.animate(
       bodyEl,
       { scale: 3, opacity: 0 },
-      { type: dynamics.easeInOut, duration: 800 }
+      {
+        type: dynamics.easeInOut,
+        duration: 800,
+        complete: () => {
+          this.props.onViewDetailsComplete();
+          // end of transition stuff
+          dynamics.stop(bodyEl);
+          dynamics.css(bodyEl, { scale: 1, opacity: 1 });
+
+          // fix for safari (allowing fixed children to keep position)
+          bodyEl.style.WebkitTransform = "";
+          bodyEl.style.transform = "";
+          this.props.router.push(`/${slug}`);
+          // this.portfolio.removeEventListener('scroll', noscroll); //
+        }
+      }
     );
 
     const child = this.refs[`child-${index}`];
@@ -191,7 +205,6 @@ class Slider extends Component {
 
     // avoid applyTransforms without ref to animate
     childRef ? this.applyTransforms(childRef) : null;
-    this.onEndTransition({ slug: slug });
 
     child[callee] ? child[callee]() : null; // call 'onViewDetails/onSlideClick' callback on child component if it exist
   };
@@ -218,20 +231,6 @@ class Slider extends Component {
     component.style.transform = trans;
   };
 
-  onEndTransition = options => {
-    setTimeout(() => {
-      // end of transition stuff
-      dynamics.stop(bodyEl);
-      dynamics.css(bodyEl, { scale: 1, opacity: 1 });
-
-      // fix for safari (allowing fixed children to keep position)
-      bodyEl.style.WebkitTransform = "";
-      bodyEl.style.transform = "";
-      this.props.router.push(`/${options.slug}`);
-      // this.portfolio.removeEventListener('scroll', noscroll); //
-    }, 801);
-  };
-
   onSliderPrev = () => {
     this.navigate("left");
   };
@@ -244,7 +243,7 @@ class Slider extends Component {
     const elems = this.getSlideElements(dir);
     const slides = [];
 
-    this.props.router.replace(`/?showcase=${elems.itemNext.props.permalink}`);
+    this.props.router.push(`/?showcase=${elems.itemNext.props.permalink}`);
 
     this.state.slides.map((slide, key) => {
       slides.push({
@@ -404,6 +403,7 @@ class Slider extends Component {
 Slider.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
   opaque: PropTypes.bool.isRequired,
+  onViewDetailsComplete: PropTypes.func.isRequired,
   onAnimateHireMeButton: PropTypes.func.isRequired,
   routeParams: PropTypes.shape({
     showcase: PropTypes.string.isRequired

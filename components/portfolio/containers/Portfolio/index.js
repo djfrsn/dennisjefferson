@@ -6,8 +6,9 @@ import Header from "../../components/Header";
 import Zoomer from "../Zoomer";
 import classNames from "classnames/bind";
 import styles from "./Portfolio.scss";
+import helpers from "../../styles/core/_helpers.scss";
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind({ ...styles, ...helpers });
 /*
  * Note: This is kept as a container-level component,
  *  i.e. We should keep this as the container that does the data-fetching
@@ -18,6 +19,7 @@ class Portfolio extends Component {
     super(props); // call super in your constructor to access this, you can also pass props to super to access props within the constructor
     // event handlers for Portfolio component
     this.state = {
+      hidden: false,
       animateHireMeButton: false,
       showProfileCard: false,
       sliderOpaque: false
@@ -38,14 +40,19 @@ class Portfolio extends Component {
     this.setState({ ...this.state, showProfileCard: show, sliderOpaque: show });
   };
 
+  hide = () => {
+    this.setState({ hidden: true });
+  };
+
   render() {
     const children = this.props.portfolio.map(app => {
       return (
         <Zoomer name={app.name} device={app.device} permalink={app.permalink} />
       );
     });
+
     return (
-      <div className={cx("portfolio")}>
+      <div className={cx({ portfolio: true, hidden: this.state.hidden })}>
         <Header
           animateHireMeButton={this.state.animateHireMeButton}
           onToggleProfileCard={this.onToggleProfileCard}
@@ -54,6 +61,7 @@ class Portfolio extends Component {
           <Slider
             children={children}
             slides={this.props.portfolio}
+            onViewDetailsComplete={this.hide}
             routeParams={this.props.routeParams}
             opaque={this.state.sliderOpaque}
             onAnimateHireMeButton={this.onAnimateHireMeButton}
