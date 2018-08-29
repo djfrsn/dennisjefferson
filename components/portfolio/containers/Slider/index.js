@@ -364,7 +364,8 @@ class Slider extends Component {
     const slides = this.props.children
       ? React.Children.map(this.props.children, (newChild, key) => {
           const child = React.cloneElement(newChild, {
-            ref: "child-" + index++
+            ref: "child-" + index++,
+            onViewDetails: this.onViewDetails
           });
           const { permalink, name, tagline, active } = this.state.slides[key];
           return (

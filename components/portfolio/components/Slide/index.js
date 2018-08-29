@@ -22,7 +22,6 @@ export default class Slide extends Component {
     return (
       <div
         className={slideClass}
-        onClick={this.onSlideClick}
         data-content={this.props.permalink}
         ref={ref => (this.slide = ref)}
       >

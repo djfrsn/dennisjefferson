@@ -20,16 +20,8 @@ export default class Zoomer extends Component {
     if (!this.state.animate) {
       // check for state.animate to prevent duplicate animations
       this.setState({ animate: true });
+      this.props.onViewDetails("onSlideClick");
     }
-  };
-
-  onSlideClick = () => {
-    this.animate();
-  };
-  // Slider component accepts two callback options, one for when the slide is clicked.
-  // The other is for the magnifying glass icon....or 'view details'
-  onViewDetails = () => {
-    this.animate();
   };
 
   render() {
@@ -46,13 +38,10 @@ export default class Zoomer extends Component {
       "zoomer__area--size-5": this.props.device === "imac" ? true : false
     });
     return (
-      <div
-        className={zoomerClass}
-        onClick={this.onZoomerClick}
-        ref={ref => (this.Zoomer = ref)}
-      >
+      <div className={zoomerClass} ref={ref => (this.Zoomer = ref)}>
         <img
           className={cx("zoomer__image")}
+          onClick={this.onZoomerClick}
           src={`/static/portfolio/${this.props.device}.png`}
           alt={this.props.device}
         />
