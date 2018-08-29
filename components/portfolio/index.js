@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Portfolio from "./containers/Portfolio";
+import Portfolio from "./components/Portfolio";
 import portfolio from "./portfolio.json";
 import profile from "./profile.json";
 import { withRouter } from "next/router";

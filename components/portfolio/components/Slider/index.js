@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Slide from "../../components/Slide";
-import SliderNav from "../../components/SliderNav";
+import Slide from "../Slide";
+import SliderNav from "../SliderNav";
 import styles from "./Slider.scss";
 import classNames from "classnames/bind";
 import { withRouter } from "next/router";
@@ -48,11 +48,12 @@ class Slider extends Component {
   componentDidMount() {
     window.onpopstate = this.onBackButtonEvent.bind(this);
     document.addEventListener("keydown", this.listenToKeyPress);
+
     if (typeof window !== "undefined") {
       Hammer = require("../../vendor/hammer");
       dynamics = require("../../vendor/dynamics");
+      this.setupHammer();
     }
-    this.setupHammer();
   }
 
   componentWillUnmount() {

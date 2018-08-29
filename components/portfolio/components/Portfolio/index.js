@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Slider from "../Slider";
 import ProfileCard from "../ProfileCard";
-import Header from "../../components/Header";
+import Header from "../Header";
 import Zoomer from "../Zoomer";
 import classNames from "classnames/bind";
 import styles from "./Portfolio.scss";
