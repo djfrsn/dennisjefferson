@@ -16,7 +16,7 @@ class Layout extends Component {
   render() {
     const permalink = toPermalink(this.props.router.pathname);
     const routeParams = permalink ? permalink : { permalink: "" };
-    console.log(permalink);
+
     let View = (
       <Portfolio
         portfolio={portfolio}

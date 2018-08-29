@@ -24,7 +24,6 @@ class FullScreen extends Component {
         ...this.props.portfolio[0],
         active: this.props.portfolio[0].toString()
       };
-      console.warn('TODO: only push home if route isn"t "/');
       this.props.router.push("/");
     }
 
@@ -57,7 +56,7 @@ class FullScreen extends Component {
 
   onEndTransition = () => {
     setTimeout(() => {
-      this.props.router.push(`/preview-${this.app.permalink}`);
+      this.props.router.push(`/?showcase=${this.app.permalink}`);
     }, 750);
   };
 

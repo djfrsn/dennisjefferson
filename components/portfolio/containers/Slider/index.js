@@ -243,7 +243,7 @@ class Slider extends Component {
     const elems = this.getSlideElements(dir);
     const slides = [];
 
-    this.props.router.push(`/preview-${elems.itemNext.props.permalink}`);
+    this.props.router.replace(`/?showcase=${elems.itemNext.props.permalink}`);
 
     this.state.slides.map((slide, key) => {
       slides.push({
