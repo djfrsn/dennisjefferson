@@ -4,17 +4,16 @@ node_js:
 cache:
   directories:
     - "node_modules" # This will tell Travis CI to cache the dependencies
-script:  # Here you could also run the build step of your application
+script: # Here you could also run the build step of your application
   - npm test
   - npm run build
 before_deploy: npm install now --no-save # Install Now CLI on Travis
 deploy:
   - provider: script # Run a custom deployment script which we will define below
-    script: now --token $NOW_TOKEN
+    script: now --token $NOW_TOKEN && now alias dev.dennisjefferson.com --token $NOW_TOKEN
     skip_cleanup: true
     on:
-      all_branches: true
-      master: false
+      branch: dev
   - provider: script
     script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
     skip_cleanup: true
