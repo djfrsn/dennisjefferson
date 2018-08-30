@@ -1,3 +1,4 @@
+@import "../../styles/settings.scss";
 @import "../../styles/core/helpers.scss";
 @import "../../styles/core/animate.scss";
 @import "../../styles/core/rubberBand.scss";
@@ -109,7 +110,7 @@
 
   margin: 0 0.5em;
 
-  transition: color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: color 0.5s $cubic-bezier;
   text-align: left;
 }
 
@@ -161,7 +162,7 @@
   height: 100%;
   margin: 0 0.5em;
 
-  transition: color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: color 0.5s $cubic-bezier;
   text-indent: 0;
 
   line-height: 2.4;

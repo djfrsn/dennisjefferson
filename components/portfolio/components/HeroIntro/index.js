@@ -13,7 +13,7 @@ const HeroIntro = () => (
       Meet me at the intersection of modern web technology and design.
     </h2>
     <hr className={cx("hero__hr")} />
-    <p className={cx("hero__text_small")}>View - Showcase</p>
+    <button className={cx("hero__button")}>View - Showcase</button>
   </div>
 );
 

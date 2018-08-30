@@ -1,3 +1,5 @@
+@import "../../styles/settings.scss";
+
 .hero__hr {
   width: 100%;
   max-width: 41em;
@@ -19,15 +21,30 @@
   font-size: 1.25em;
 }
 
-.hero__text_small {
+.hero__button {
   display: inline;
 
   padding: 0 0.5em;
+  padding: 0.2em 0.3em;
 
+  cursor: pointer;
+  transition: background 1s $cubic-bezier;
+
+  color: #cecece;
+  border: none;
   border-radius: 0.05em;
   background: #5c5edc;
 
   font-size: 1.3em;
+
+  &:hover {
+    background: darken(#5c5edc, 4);
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 @media screen and (min-width: 60em) {
