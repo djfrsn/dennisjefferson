@@ -30,8 +30,8 @@ class Header extends Component {
         <h1>Software Developer</h1>
         <nav role="navigation">
           <div className={cx("site-nav-links")}>
+            <a href="#">Learn More</a>
             <a href="#">Showcase</a>
-            <a href="#">Process</a>
           </div>
           <div>
             <a
