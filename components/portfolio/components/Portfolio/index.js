@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Slider from "../Slider";
+import Process from "../Process";
 import HeroIntro from "../HeroIntro";
 import ProfileCard from "../ProfileCard";
 import Header from "../Header";
@@ -60,6 +61,7 @@ class Portfolio extends Component {
         />
         <div className={cx("portfolio__body")}>
           <HeroIntro />
+          <Process />
           <h1 className={cx("showcase__title")}>Showcase</h1>
           <div className={cx("inner__container")}>
             <Slider
