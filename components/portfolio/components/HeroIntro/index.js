@@ -7,14 +7,13 @@ const cx = classNames.bind(styles);
 const HeroIntro = () => (
   <div className={cx("hero__intro")}>
     <h1 className={cx("hero__text_large")}>
-      Lets buildin an amazing product together
+      Lets build an amazing product together.
     </h1>
     <h2 className={cx("hero__text_medium")}>
-      Meet me at the intersection of modern web technology and design
+      Meet me at the intersection of modern web technology and design.
     </h2>
     <hr className={cx("hero__hr")} />
-    <p className={cx("hero__text_small")}>View</p>
-    <p className={cx("hero__text_tiny")}> - Showcase</p>
+    <p className={cx("hero__text_small")}>View - Showcase</p>
   </div>
 );
 

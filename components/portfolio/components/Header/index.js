@@ -29,28 +29,26 @@ class Header extends Component {
         <div className={cx("site-info")}>Dev since 12</div>
         <h1>Software Developer</h1>
         <nav role="navigation">
-          <a
-            className={HireMeButtonClass}
-            onClick={this.onShowProfile}
-            data-info="Hire Me"
-          >
-            <span>Hire Me</span>
-          </a>
-          <a
-            href="Twitter user url"
-            className={cx("bp-icon", "bp-icon-twitter")}
-            data-info="kaw kaw"
-            target="_blank"
-          >
-            <span>@twitter.name</span>
-          </a>
-          <a
-            href="mailto:Site Email"
-            className={cx("bp-icon", "bp-icon-email")}
-            data-info="email!"
-          >
-            <span>send me e-mail</span>
-          </a>
+          <div className={cx("site-nav-links")}>
+            <a href="#">Showcase</a>
+            <a href="#">Process</a>
+          </div>
+          <div>
+            <a
+              className={HireMeButtonClass}
+              onClick={this.onShowProfile}
+              data-info="Hire Me"
+            >
+              <span>Hire Me</span>
+            </a>
+            <a
+              href="mailto:dennismjefferson@gmail.com"
+              className={cx("bp-icon", "bp-icon-email")}
+              data-info="Email"
+            >
+              <span>send me e-mail</span>
+            </a>
+          </div>
         </nav>
       </header>
     );

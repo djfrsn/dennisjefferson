@@ -1,8 +1,13 @@
 .hero__intro {
-  margin: 1em;
+  margin: 2em;
 }
 
 .hero__hr {
+  width: 100%;
+  max-width: 41em;
+  margin: 0.5em 0;
+
+  border-radius: 0.01em;
 }
 
 .hero__text_large {
@@ -21,19 +26,24 @@
 .hero__text_small {
   display: inline;
 
-  padding-left: 0.5em;
+  padding: 0 0.5em;
 
+  border-radius: 0.05em;
   background: #5c5edc;
 
   font-size: 1.3em;
 }
 
-.hero__text_tiny {
-  display: inline;
+@media screen and (min-width: 40em) {
+  .hero__intro {
+    margin: 5em;
+  }
+}
 
-  padding-right: 0.5em;
-
-  background: #5c5edc;
-
-  font-size: 1.3em;
+@media screen and (min-width: 60em) {
+  .hero__intro {
+    width: 50%;
+    margin: 10em;
+    margin-right: auto;
+  }
 }
