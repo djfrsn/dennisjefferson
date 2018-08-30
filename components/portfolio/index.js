@@ -15,13 +15,15 @@ class Layout extends Component {
     const route_query = this.props.router.query;
     const routeParams = route_query.showcase ? route_query : { showcase: "" };
 
-    return (
-      <Portfolio
-        portfolio={portfolio}
-        routeParams={routeParams}
-        profile={profile}
-      />
-    );
+    // return (
+    //   <Portfolio
+    //     portfolio={portfolio}
+    //     routeParams={routeParams}
+    //     profile={profile}
+    //   />
+    // );
+
+    return <h1 style={{ marginLeft: "1em" }}>Under Construction</h1>;
   }
 }
 
