@@ -5,7 +5,15 @@
 **
 */
 .portfolio {
+  color: #b3b5ff;
+  background: #222125;
+  background: linear-gradient(1deg, #5c5edc, #222125);
+
+  font-size: 100%;
+
   @extend .container;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .inner__container {

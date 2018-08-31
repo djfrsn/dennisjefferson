@@ -1,7 +1,9 @@
 @import "../../styles/settings.scss";
+
 .hero__intro {
   margin-bottom: 5em;
 }
+
 .hero__hr {
   width: 100%;
   max-width: 41em;
@@ -12,6 +14,8 @@
 
 .hero__text_large {
   margin: 0.5em 0 0;
+
+  color: #5c5edc;
 
   font-size: 1.75em;
   line-height: 1.1em;
@@ -34,9 +38,9 @@
   cursor: pointer;
   transition: background 1s $cubic-bezier;
 
-  color: #cecece;
+  color: #b3b5ff;
   border: none;
-  border-radius: 0.05em;
+  border-radius: 0.08em;
   background: #5c5edc;
 
   font-size: 1.4em;
