@@ -1,14 +1,14 @@
-@import '../../styles/core/icon.scss';
-@import '../../styles/core/button.scss';
+@import "../../styles/core/icon.scss";
+@import "../../styles/core/button.scss";
 /*
 **
 *** SliderNav Styles
 **
 */
 .slider__nav {
-  position: fixed;
-  bottom: 2em;
   width: 100%;
+  margin-top: 2em;
+
   text-align: center;
 }
 
@@ -28,17 +28,18 @@
 }
 
 @media screen and (max-width: 40em) {
-  .slider__nav  {
+  .slider__nav {
     position: relative;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 20px;
-    margin-bottom: 10px;
-    margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 20em) {
-  .slider__nav  {
+  .slider__nav {
     bottom: 4em;
   }
 }
