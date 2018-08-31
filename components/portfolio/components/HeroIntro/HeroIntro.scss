@@ -1,5 +1,7 @@
 @import "../../styles/settings.scss";
-
+.hero__intro {
+  margin-bottom: 5em;
+}
 .hero__hr {
   width: 100%;
   max-width: 41em;
@@ -18,6 +20,8 @@
 .hero__text_medium {
   margin: 0.5em 0 0;
 
+  color: #b3b5ff;
+
   font-size: 1.25em;
 }
 
@@ -35,7 +39,7 @@
   border-radius: 0.05em;
   background: #5c5edc;
 
-  font-size: 1.3em;
+  font-size: 1.4em;
 
   &:hover {
     background: darken(#5c5edc, 4);
@@ -51,5 +55,6 @@
   .hero__intro {
     width: 50%;
     margin-right: auto;
+    margin-bottom: 10em;
   }
 }

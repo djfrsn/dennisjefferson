@@ -30,15 +30,11 @@ class Header extends Component {
         <h1>Software Developer</h1>
         <nav role="navigation">
           <div className={cx("site-nav-links")}>
-            <a href="#">Learn More</a>
-            <a href="#">Showcase</a>
+            <a onClick={this.onShowProfile}>Contact</a>
+            {/* <a href="#">Showcase</a> */}
           </div>
           <div>
-            <a
-              className={HireMeButtonClass}
-              onClick={this.onShowProfile}
-              data-info="Hire Me"
-            >
+            <a className={HireMeButtonClass} data-info="Hire Me">
               <span>Hire Me</span>
             </a>
             <a

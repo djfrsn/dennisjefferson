@@ -54,32 +54,34 @@ class Portfolio extends Component {
     });
 
     return (
-      <div className={cx({ portfolio: true, hidden: this.state.hidden })}>
-        <Header
-          animateHireMeButton={this.state.animateHireMeButton}
-          onToggleProfileCard={this.onToggleProfileCard}
-        />
-        <div className={cx("portfolio__body")}>
-          <HeroIntro />
-          <LearnMore />
-          <h1 className={cx("showcase__title")}>Showcase</h1>
-          <div className={cx("inner__container")}>
-            <Slider
-              children={children}
-              slides={this.props.portfolio}
-              onViewDetailsComplete={this.hide}
-              routeParams={this.props.routeParams}
-              opaque={this.state.sliderOpaque}
-              onAnimateHireMeButton={this.onAnimateHireMeButton}
-            />
-          </div>
-          <ProfileCard
-            {...this.props.profile}
-            show={this.state.showProfileCard}
+      <React.Fragment>
+        <div className={cx({ portfolio: true, hidden: this.state.hidden })}>
+          <Header
+            animateHireMeButton={this.state.animateHireMeButton}
             onToggleProfileCard={this.onToggleProfileCard}
           />
+          <div className={cx("portfolio__body")}>
+            <HeroIntro />
+            <LearnMore />
+            <div className={cx("inner__container")}>
+              <Slider
+                children={children}
+                slides={this.props.portfolio}
+                onViewDetailsComplete={this.hide}
+                routeParams={this.props.routeParams}
+                opaque={this.state.sliderOpaque}
+                onAnimateHireMeButton={this.onAnimateHireMeButton}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+
+        <ProfileCard
+          {...this.props.profile}
+          show={this.state.showProfileCard}
+          onToggleProfileCard={this.onToggleProfileCard}
+        />
+      </React.Fragment>
     );
   }
 }

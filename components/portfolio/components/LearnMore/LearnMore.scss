@@ -1,6 +1,48 @@
 .process__body {
-  margin-top: 7em;
+  margin-top: 4em;
+
+  p {
+    width: 90%;
+
+    text-align: left;
+
+    font-size: 1.15em;
+    @media screen and (min-width: 30em) {
+      .hero__intro {
+        max-width: 60%;
+      }
+    }
+  }
 }
 
-.process__title {
+.process__title_container {
+  position: relative;
+
+  height: 9em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  svg {
+    position: absolute;
+    z-index: 1;
+    left: -0.9em;
+
+    transform: scale(0.85);
+  }
+  .process__title {
+    position: relative;
+    z-index: 2;
+    top: 1em;
+    left: 0.6em;
+
+    font-size: 3em;
+  }
+  &.showcase {
+    height: 0;
+    margin-bottom: 4em;
+  }
+  .showcase {
+    top: 0.1em;
+
+    margin-bottom: 0;
+  }
 }
