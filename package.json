@@ -19,7 +19,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-apollo": "2.1.0",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "svgjs": "^2.6.2"
   },
   "now": {
     "alias": "dennisjefferson.com",
@@ -36,5 +37,8 @@
     "> 1%"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "imports-loader": "^0.8.0"
+  }
 }

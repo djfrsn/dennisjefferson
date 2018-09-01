@@ -41,7 +41,7 @@ class HeroIntro extends Component {
         <h2 className={cx("hero__text_medium")}>
           Meet me at the intersection of modern web technology and design.
         </h2>
-        <hr className={cx("hero__hr")} />
+        <div className={cx("hero__hr")} />
         <button className={cx("hero__button")}>Showcase</button>
       </div>
     );

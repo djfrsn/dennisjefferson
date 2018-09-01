@@ -1,10 +1,13 @@
 .process__body {
   margin-top: 4em;
 
+  color: #b3b5ff;
   p {
     width: 90%;
 
     text-align: left;
+
+    color: #b3b5ff;
 
     font-size: 1.15em;
     @media screen and (min-width: 30em) {
@@ -26,6 +29,9 @@
     z-index: 1;
     left: -0.9em;
 
+    height: 10em;
+    padding: 1em 0;
+
     transform: scale(0.85);
   }
   .process__title {
@@ -41,7 +47,7 @@
     margin-bottom: 4em;
   }
   .showcase {
-    top: 0.1em;
+    top: 0.5em;
 
     margin-bottom: 0;
   }

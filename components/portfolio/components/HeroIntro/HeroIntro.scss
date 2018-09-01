@@ -4,12 +4,42 @@
   margin-bottom: 5em;
 }
 
+@keyframes AnimatedGradient {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@mixin animatedGradientText {
+  animation: AnimatedGradient 32s ease infinite;
+
+  background: linear-gradient(90deg, #e21377, #5c5edc);
+  -webkit-background-clip: text;
+  background-size: 400% 400%;
+
+  -webkit-text-fill-color: transparent;
+}
+@mixin animatedGradientBg {
+  animation: AnimatedGradient 32s ease infinite;
+
+  background: linear-gradient(90deg, #e21377, #5c5edc);
+  background-size: 400% 400%;
+}
+
 .hero__hr {
   width: 100%;
   max-width: 41em;
+  height: 0.15em;
   margin: 0.5em 0;
 
   border-radius: 0.01em;
+
+  @include animatedGradientBg();
 }
 
 .hero__text_large {
@@ -19,6 +49,8 @@
 
   font-size: 1.75em;
   line-height: 1.1em;
+
+  @include animatedGradientText();
 }
 
 .hero__text_medium {
