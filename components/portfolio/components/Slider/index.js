@@ -265,8 +265,6 @@ class Slider extends Component {
       nextEl: elems.nextEl,
       nextTitleEl: elems.nextTitleEl
     });
-
-    this.props.onAnimateHireMeButton(elems.current % 2 === 0);
   };
 
   animate(options) {
@@ -406,7 +404,6 @@ Slider.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
   opaque: PropTypes.bool.isRequired,
   onViewDetailsComplete: PropTypes.func.isRequired,
-  onAnimateHireMeButton: PropTypes.func.isRequired,
   routeParams: PropTypes.shape({
     showcase: PropTypes.string.isRequired
   }),

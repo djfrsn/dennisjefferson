@@ -35,6 +35,8 @@ class Portfolio extends Component {
         this.animateHeroText(dynamics)
       );
     }
+
+    this.animateHireMe(true);
   }
 
   animateHeroText = dynamics => {
@@ -58,8 +60,12 @@ class Portfolio extends Component {
    * Containers are Stateful /\ Components are Stateless
    * Thinking in React: http://facebook.github.io/react/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live
    */
-  onAnimateHireMeButton = animate => {
-    this.setState({ ...this.state, animateHireMeButton: animate });
+  animateHireMe = animate => {
+    setTimeout(() => {
+      this.setState({ ...this.state, animateHireMeButton: animate }, () =>
+        this.animateHireMe(Math.random() >= 0.8)
+      );
+    }, 1000);
   };
 
   onToggleProfileCard = show => {
