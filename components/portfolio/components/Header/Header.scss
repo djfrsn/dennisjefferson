@@ -116,10 +116,13 @@
   a {
     padding-bottom: 0.1em;
 
-    color: #cecece;
+    color: #b3b5ff;
     border-bottom: 0.025em solid #5c5edc;
 
     line-height: 1em;
+    &:hover {
+      color: #cecece;
+    }
   }
 }
 
