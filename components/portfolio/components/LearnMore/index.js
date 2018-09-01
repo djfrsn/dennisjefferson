@@ -15,9 +15,6 @@ class LearnMore extends Component {
   }
 
   animateShapes = SVG => {
-    // var toSimple = function() {
-    //   triangle.animate({ d: rectanglePoints }, 1000, mina.backout, toFancy);
-    // };
     const shape1 = SVG("shape-1").size("50%", "50%");
     const shape2 = SVG("shape-2").size("50%", "50%");
     const shape3 = SVG("shape-3").size("50%", "50%");
