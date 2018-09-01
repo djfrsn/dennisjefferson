@@ -4,7 +4,6 @@ export default ({ title = "Dennis Jefferson" }) => (
   <Head>
     <title>{title}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -26,11 +25,9 @@ export default ({ title = "Dennis Jefferson" }) => (
     <link
       rel="mask-icon"
       href="/static/safari-pinned-tab.svg"
-      color="#5bbad5"
+      color="#5c5edc"
     />
-    <link rel="shortcut icon" href="/static/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-config" content="/static/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato"
