@@ -16,6 +16,7 @@ const cx = classNames.bind({ ...styles, ...helpers });
  *  i.e. We should keep this as the container that does the data-fetching
  *  and dispatching of actions if you decide to have any sub-components.
  */
+
 class Portfolio extends Component {
   constructor(props) {
     super(props); // call super in your constructor to access this, you can also pass props to super to access props within the constructor
@@ -26,7 +27,30 @@ class Portfolio extends Component {
       showProfileCard: false,
       sliderOpaque: false
     }; // set initial state
+    this.portfolioNoiseBgRef = React.createRef();
   }
+  componentDidMount() {
+    if (typeof window !== "undefined") {
+      import("../../vendor/dynamics").then(dynamics =>
+        this.animateHeroText(dynamics)
+      );
+    }
+  }
+
+  animateHeroText = dynamics => {
+    dynamics.animate(
+      this.portfolioNoiseBgRef.current,
+      {
+        opacity: 1
+      },
+      {
+        type: dynamics.easeIn,
+        duration: 2000,
+        friction: 413
+      }
+    );
+  };
+
   /*
    * Containers propogate state changes down to components.
    * Components should be dumb and avoid manipulating state. If it has state, it's not a component.
@@ -56,6 +80,10 @@ class Portfolio extends Component {
     return (
       <React.Fragment>
         <div className={cx({ portfolio: true, hidden: this.state.hidden })}>
+          <div
+            ref={this.portfolioNoiseBgRef}
+            className={cx("portfolio-noise")}
+          />
           <Header
             animateHireMeButton={this.state.animateHireMeButton}
             onToggleProfileCard={this.onToggleProfileCard}

@@ -4,6 +4,19 @@
 *** Intro Styles
 **
 */
+.portfolio-noise {
+  position: absolute;
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  background: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+}
+
 .portfolio {
   background: #222125;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -13,20 +26,7 @@
   @extend .container;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &:before {
-    position: absolute;
-    z-index: 2;
 
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    content: "";
-
-    opacity: 0.5;
-    background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
-  }
   &:after {
     position: absolute;
     z-index: 1;
@@ -39,6 +39,15 @@
     content: "";
 
     background: linear-gradient(1deg, #5c5edc, #222125);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
   }
 }
 
