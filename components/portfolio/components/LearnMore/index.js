@@ -31,16 +31,16 @@ class LearnMore extends Component {
     const svg_shape3 = shape3.rect(200, 75).attr({ fill: "#5c5edc" });
 
     svg_shape1
-      .animate(16000, ">")
+      .animate(14000, ">")
       .skew(0, -10)
-      .animate(16000, ">")
+      .animate(14000, ">")
       .skew(0, 10)
       .loop(Infinity, true);
 
     svg_shape2
-      .animate(16000, ">")
+      .animate(14000, ">")
       .skew(0, 10)
-      .animate(16000, ">")
+      .animate(14000, ">")
       .skew(0, -10)
       .loop(Infinity, true);
 
