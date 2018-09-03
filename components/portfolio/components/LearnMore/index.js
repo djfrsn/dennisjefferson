@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classNames from "classnames/bind";
 import styles from "./LearnMore.scss";
 import shapeStyles from "../Shapes/Shapes.scss";
+import { Showcase, Technique, Mission } from "../Shapes";
 
 const cx = classNames.bind({ ...styles, ...shapeStyles });
 
@@ -9,15 +10,15 @@ class LearnMore extends Component {
   componentDidMount() {
     if (typeof window !== "undefined") {
       import("svgjs").then(Snap => {
-        this.animateShapes(Snap);
+        // this.animateShapes(Snap);
       });
     }
   }
 
   animateShapes = SVG => {
-    const shape1 = SVG("shape-1").size("50%", "50%");
-    const shape2 = SVG("shape-2").size("50%", "50%");
-    const shape3 = SVG("shape-3").size("50%", "50%");
+    const shape1 = SVG("mission-shape").size(100, 100);
+    const shape2 = SVG("tech-shape").size(100, 100);
+    const shape3 = SVG("showcase-shape").size(100, 100);
 
     const svg_shape1 = shape1
       .rect(100, 100)
@@ -56,7 +57,7 @@ class LearnMore extends Component {
     return (
       <div className={cx("process__body")}>
         <div className={cx("process__title_container")}>
-          <div id="shape-1" className={cx("shape")} />
+          <Mission id="showcase-shape" className={cx("shape")} />
           <h1 className={cx("process__title")}>Mission</h1>
         </div>
 
@@ -68,7 +69,7 @@ class LearnMore extends Component {
         </p>
 
         <div className={cx("process__title_container")}>
-          <div id="shape-2" className={cx("shape")} />
+          <Technique id="tech-shape" className={cx("shape")} />
           <h1 className={cx("process__title")}>Technique</h1>
         </div>
 
@@ -85,7 +86,7 @@ class LearnMore extends Component {
         </p>
 
         <div className={cx("process__title_container", "showcase")}>
-          <div id="shape-3" className={cx("shape")} />
+          <Showcase id="showcase-shape" className={cx("shape")} />
           <h1 className={cx("process__title", "showcase")}>Showcase</h1>
         </div>
       </div>

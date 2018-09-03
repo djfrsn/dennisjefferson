@@ -19,6 +19,7 @@ class HeroIntro extends Component {
           Meet me at the intersection of modern web technology and design.
         </h2>
         <div className={cx("hero__hr")} />
+        <div className={cx("hero__hr", "dark")} />
         <button className={cx("hero__button")}>Let's Collaborate</button>
       </div>
     );

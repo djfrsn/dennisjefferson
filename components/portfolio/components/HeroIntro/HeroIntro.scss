@@ -30,16 +30,29 @@
   background: linear-gradient(90deg, #e21377, #5c5edc);
   background-size: 400% 400%;
 }
+@mixin animatedGradientBgDark {
+  animation: AnimatedGradient 32s ease infinite;
+
+  background: linear-gradient(90deg, #ac0e5a, #4345a4);
+  background-size: 400% 400%;
+}
 
 .hero__hr {
   width: 100%;
   max-width: 41em;
   height: 0.15em;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
 
   border-radius: 0.01em;
 
   @include animatedGradientBg();
+
+  &.dark {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+
+    @include animatedGradientBgDark();
+  }
 }
 
 .hero__text_large {

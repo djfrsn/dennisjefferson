@@ -27,18 +27,19 @@
   svg {
     position: absolute;
     z-index: 1;
-    left: -0.9em;
 
-    height: 10em;
-    padding: 1em 0;
+    width: 6.25em;
+    // left: -0.9em;
+    // height: 10em;
+    // padding: 1em 0;
 
-    transform: scale(0.85);
+    // transform: scale(0.85);
   }
   .process__title {
     position: relative;
     z-index: 2;
-    top: 1em;
-    left: 0.6em;
+    // top: 1em;
+    // left: 0.6em;
 
     font-size: 3em;
   }
@@ -47,8 +48,7 @@
     margin-bottom: 4em;
   }
   .showcase {
-    top: 0.5em;
-
+    // top: 0.5em;
     margin-bottom: 0;
   }
 }
