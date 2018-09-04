@@ -57,7 +57,7 @@ class LearnMore extends Component {
     return (
       <div className={cx("process__body")}>
         <div className={cx("process__title_container")}>
-          <Mission id="showcase-shape" className={cx("shape")} />
+          <Mission className={cx("shape")} />
           <h1 className={cx("process__title")}>Mission</h1>
         </div>
 
@@ -69,7 +69,7 @@ class LearnMore extends Component {
         </p>
 
         <div className={cx("process__title_container")}>
-          <Technique id="tech-shape" className={cx("shape")} />
+          <Technique className={cx("shape")} />
           <h1 className={cx("process__title")}>Technique</h1>
         </div>
 
@@ -86,7 +86,7 @@ class LearnMore extends Component {
         </p>
 
         <div className={cx("process__title_container", "showcase")}>
-          <Showcase id="showcase-shape" className={cx("shape")} />
+          <Showcase className={cx("shape")} />
           <h1 className={cx("process__title", "showcase")}>Showcase</h1>
         </div>
       </div>

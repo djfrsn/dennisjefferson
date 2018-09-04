@@ -5,6 +5,7 @@ import LearnMore from "../LearnMore";
 import HeroIntro from "../HeroIntro";
 import ProfileCard from "../ProfileCard";
 import Header from "../Header";
+import Footer from "../Footer";
 import Zoomer from "../Zoomer";
 import classNames from "classnames/bind";
 import styles from "./Portfolio.scss";
@@ -108,6 +109,7 @@ class Portfolio extends Component {
               />
             </div>
           </div>
+          {/* <Footer /> */}
         </div>
 
         <ProfileCard

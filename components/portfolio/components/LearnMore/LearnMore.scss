@@ -29,6 +29,8 @@
     z-index: 1;
 
     width: 6.25em;
+
+    opacity: 0.5;
     // left: -0.9em;
     // height: 10em;
     // padding: 1em 0;
@@ -46,6 +48,10 @@
   &.showcase {
     height: 0;
     margin-bottom: 4em;
+
+    svg {
+      width: 5.3em;
+    }
   }
   .showcase {
     // top: 0.5em;
