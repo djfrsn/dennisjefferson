@@ -8,11 +8,7 @@
 footer {
   z-index: 3;
 
-  margin: 2em;
-
-  color: #b3b5ff;
-
-  @extend .container;
+  margin: 0 2em 2em;
 
   div {
     display: block;
@@ -24,14 +20,41 @@ footer {
     background-color: #b3b5ff;
   }
 }
+
+.footer-message {
+  margin: 0.5em 0;
+
+  text-align: left;
+
+  color: #b3b5ff;
+}
+
+.footer-email {
+  display: block;
+
+  margin-top: 0.5em;
+
+  color: #b3b5ff;
+
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 40em) {
   footer {
-    margin: 5em;
+    margin: 5em 5em;
+  }
+  .footer-message {
+    font-size: 1.6em;
+  }
+
+  .footer-email {
+    font-size: 2.5em;
   }
 }
 
 @media screen and (min-width: 60em) {
   footer {
-    margin: 5em 10em;
+    margin: 5.5em 10em;
   }
 }

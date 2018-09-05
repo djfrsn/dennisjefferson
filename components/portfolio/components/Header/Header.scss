@@ -8,11 +8,7 @@
 .bp-header {
   z-index: 201; // position over slider to allow clicks/touch on icon with mobile devices
 
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   width: 100%;

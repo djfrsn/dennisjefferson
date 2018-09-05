@@ -9,9 +9,15 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <h3>Lets talk?</h3>
+        <h3 className={cx("footer-message")}>Lets talk?</h3>
         <div />
-        <h1>dj@dennisjefferson.com</h1>
+        <a
+          href="mailto:dennismjefferson@gmail.com"
+          className={cx("footer-email")}
+          data-info="Email"
+        >
+          dj@dennisjefferson.com
+        </a>
       </footer>
     );
   }

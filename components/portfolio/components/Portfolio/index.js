@@ -10,6 +10,7 @@ import Zoomer from "../Zoomer";
 import classNames from "classnames/bind";
 import styles from "./Portfolio.scss";
 import helpers from "../../styles/core/_helpers.scss";
+import { Quartz } from "../Shapes";
 
 const cx = classNames.bind({ ...styles, ...helpers });
 /*
@@ -87,6 +88,9 @@ class Portfolio extends Component {
     return (
       <React.Fragment>
         <div className={cx({ portfolio: true, hidden: this.state.hidden })}>
+          <div className={cx("quartz")}>
+            <Quartz />
+          </div>
           <div
             ref={this.portfolioNoiseBgRef}
             className={cx("portfolio-noise")}
@@ -109,7 +113,7 @@ class Portfolio extends Component {
               />
             </div>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
 
         <ProfileCard
